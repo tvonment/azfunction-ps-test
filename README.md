@@ -6,3 +6,7 @@ func new --name <<FUNCTIONNAME>> --template "HTTP trigger"
 
 az login
 az acr build --registry <<REGISTRYNAME>> --image <<IMAGENAME>>:v1.0.0 .
+
+
+
+// Change AuthLevel in function.json to anonymous
