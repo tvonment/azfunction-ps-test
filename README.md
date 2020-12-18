@@ -2,11 +2,18 @@
 
 https://docs.microsoft.com/en-us/azure/azure-functions/functions-create-function-linux-custom-image?tabs=bash%2Cportal&pivots=programming-language-powershell
 
+sudo apt-get update
+
+sudo apt-get install azure-functions-core-tools-3
+
 func init PROJECTNAME --worker-runtime powershell --docker
+
 cd PROJECTNAME
+
 func new --name FUNCTIONNAME --template "HTTP trigger"
 
 az login
+
 az acr build --registry REGISTRYNAME --image IMAGENAME:v1.0.0 .
 
 
